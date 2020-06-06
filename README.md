@@ -5,5 +5,7 @@ It is intended to be used by educators for students to learn how to interact wit
 
 A live version can be loaded through shinyapps.io here: [https://webb.shinyapps.io/MOG_education/](https://webb.shinyapps.io/MOG_education/)
 
+You need a user token for the Mapbox API to run the app.
+
 ![](mog_app_screen1.png)
 ![](mog_app_screen2.png)

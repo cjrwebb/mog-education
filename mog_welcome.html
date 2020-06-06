@@ -1,0 +1,73 @@
+
+
+
+<h1>
+Welcome to <strong>MOG</strong> (alpha), the Mapping Overlaps Gadget for local authorities in England and Wales.
+</h1>
+<p><br></p>
+<p><strong>MOG</strong> is a Shiny app for visualising neighbourhood level data in England and some of Wales by Local Authority. It combines a collection of open data from the Office of National Statistics (ONS), the Consumer Data Research Centre (CDRC), the Department for Communities and Local Government (DCLG), and the Department for Transport (DfT).</p>
+<p>All data is at the <a href="https://www.ons.gov.uk/methodology/geography/ukgeographies/censusgeography" target="_blank">Lower Super Output Area</a> level. There are 104 variables for England, 82 variables for Wales, and 45 shared variables; at the moment, the data included comes from the following open data sources:</p>
+<ul>
+<li>Data from the Indices of Multiple Deprivation 2019</li>
+<li>Data from the 2011 Census relating to Ethnicity</li>
+<li>Life Expectancy at Birth (2009-2013)</li>
+<li>Median House Price (2017 &amp; 2018)</li>
+<li>Journey Time Statistics for Key Services (2017)</li>
+<li>Access to Healthy Assets and Hazards (AHAH) 2017</li>
+<li>StatsWales</li>
+</ul>
+<p>The <strong>MOG</strong> contains two features:</p>
+<ul>
+<li>Univariate Maps</li>
+<li>Overlap (Bivariate) Maps</li>
+</ul>
+<p>Univariate maps are the kind of maps that are available on many websites, for example, <a href="https://maps.cdrc.ac.uk/#/geodemographics/imde2019/default/BTTTFFT/10/-0.1500/51.5200/" target="_blank">from the CDRC</a>.</p>
+<p>The <strong>MOG</strong> also allows you to create simple bivariate, or overlap, maps. These types of maps combine values of two different variables to assess their relationship by mixing their colour palette. The idea and templates for some of the code came from <a href="https://timogrossenbacher.ch/2019/04/bivariate-maps-with-ggplot2-and-sf/" target="_blank">this blog post</a> by Timo Grossenbacher, who created a far more beautiful static bivariate map.</p>
+<p>I hope that people will find some interesting ways to use the <strong>MOG</strong>. I’ve written a blog post, <a href="http://calumwebb.uk/posts/mog-alpha-launch/" target="_blank">hosted here</a>, with an example of how the maps can be used for scoping out potential research projects or local policy initiatives.</p>
+<p>If you have any comments or suggestions you can find my contact details <a href="https://www.sheffield.ac.uk/socstudies/staff/staff-profiles/calum-webb" target="_blank">here</a>.</p>
+<p>Best wishes and thanks for trying out the <strong>MOG</strong>,</p>
+<p>Cal</p>
+<hr />
+<p>Known bugs:</p>
+<ul>
+<li>Occassionally a neighbourhood is rendered with a non-transparent fill making it look like the value is more extreme.</li>
+<li>Univariate maps for house price data (and possibly other data with missing values) do not plot correctly in univariate plots. They do work in bivariate plots. Fixed 13.01.2019</li>
+</ul>
+<hr />
+<p>The <strong>MOG</strong> was created by <a href="https://www.sheffield.ac.uk/socstudies/staff/staff-profiles/calum-webb">Calum Webb</a> using the following <code>R</code> packages:</p>
+<ul>
+<li><p>
+Chang W, Borges Ribeiro B (2018). <em>shinydashboard: Create Dashboards with ‘Shiny’</em>. R package version 0.7.1, <a href="https://CRAN.R-project.org/package=shinydashboard">https://CRAN.R-project.org/package=shinydashboard</a>.
+</p></li>
+<li><p>
+Chang W, Cheng J, Allaire J, Xie Y, McPherson J (2019). <em>shiny: Web Application Framework for R</em>. R package version 1.3.2, <a href="https://CRAN.R-project.org/package=shiny">https://CRAN.R-project.org/package=shiny</a>.
+</p></li>
+<li><p>
+Gorman B (2018). <em>mltools: Machine Learning Tools</em>. R package version 0.3.5, <a href="https://CRAN.R-project.org/package=mltools">https://CRAN.R-project.org/package=mltools</a>.
+</p></li>
+<li><p>
+Grothendieck G (2018). <em>gsubfn: Utilities for Strings and Function Arguments</em>. R package version 0.7, <a href="https://CRAN.R-project.org/package=gsubfn">https://CRAN.R-project.org/package=gsubfn</a>.
+</p></li>
+<li><p>
+Henry L, Wickham H (2019). <em>rlang: Functions for Base Types and Core R and ‘Tidyverse’ Features</em>. R package version 0.4.0, <a href="https://CRAN.R-project.org/package=rlang">https://CRAN.R-project.org/package=rlang</a>.
+</p></li>
+<li><p>
+Neuwirth E (2014). <em>RColorBrewer: ColorBrewer Palettes</em>. R package version 1.1-2, <a href="https://CRAN.R-project.org/package=RColorBrewer">https://CRAN.R-project.org/package=RColorBrewer</a>.
+</p></li>
+<li><p>
+Pebesma E (2018). “Simple Features for R: Standardized Support for Spatial Vector Data.” <em>The R Journal</em>, <b>10</b>(1), 439–446. doi: <a href="https://doi.org/10.32614/RJ-2018-009">10.32614/RJ-2018-009</a>, <a href="https://doi.org/10.32614/RJ-2018-009">https://doi.org/10.32614/RJ-2018-009</a>.
+</p></li>
+<li><p>
+Sievert C (2018). <em>plotly for R</em>. <a href="https://plotly-r.com">https://plotly-r.com</a>.
+</p></li>
+<li><p>
+Vaidyanathan R, Xie Y, Allaire J, Cheng J, Russell K (2018). <em>htmlwidgets: HTML Widgets for R</em>. R package version 1.3, <a href="https://CRAN.R-project.org/package=htmlwidgets">https://CRAN.R-project.org/package=htmlwidgets</a>.
+</p></li>
+<li><p>
+Wickham H (2017). <em>tidyverse: Easily Install and Load the ‘Tidyverse’</em>. R package version 1.2.1, <a href="https://CRAN.R-project.org/package=tidyverse">https://CRAN.R-project.org/package=tidyverse</a>.
+</p></li>
+<li><p>
+Wickham H (2019). <em>lazyeval: Lazy (Non-Standard) Evaluation</em>. R package version 0.2.2, <a href="https://CRAN.R-project.org/package=lazyeval">https://CRAN.R-project.org/package=lazyeval</a>.
+</p></li>
+</ul>
+

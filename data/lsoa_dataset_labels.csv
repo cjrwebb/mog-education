@@ -1,0 +1,108 @@
+var_name,label
+LSOA_code,LSOA_code
+LA_name,LA_name
+MSOA11CD,MSOA11CD
+ImdS2015IW,(IMD2015) IMD Score 2015 (Higher = More Deprived) including Wales
+WhtPrcntOP,(Census2011) White (All Categories) % of Population
+WhtBrtsPOP,(Census2011) White British % of Population
+WhtIrshPOP,(Census2011) White Irish % of Population
+WhtTrvlPOP,(Census2011) White Traveller % of Population
+WhtOthrPOP,(Census2011) White Other % of Population
+MxdHrtgPOP,(Census2011) Mixed Heritage (All Categories) % of Population
+MxdHWBCPOP,(Census2011) Mixed Heritage White/Black Caribbean % of Population
+MxdHWBAPOP,(Census2011) Mixed Heritage White/Black African % of Population
+MxdHrWAPOP,(Census2011) Mixed Heritage White/Asian % of Population
+MxdHrtOPOP,(Census2011) Mixed Heritage Other % of Population
+AsnBrtAPOP,(Census2011) Asian/British Asian (All Categories) % of Population
+AsnBrAIPOP,(Census2011) Asian/British Asian Indian % of Population
+AsnBrAPPOP,(Census2011) Asian/British Asian Pakistani % of Population
+AsnBrABPOP,(Census2011) Asian/British Asian Bangladeshi % of Population
+AsnBrACPOP,(Census2011) Asian/British Asian Chinese % of Population
+AsnBrAOPOP,(Census2011) Asian/British Asian Other % of Population
+BlckBlBPOP,(Census2011) Black/Black British (All Categories) % of Population
+BlckBBAPOP,(Census2011) Black/Black British African % of Population
+BlckBBCPOP,(Census2011) Black/Black British Caribbean % of Population
+BlckBBOPOP,(Census2011) Black/Black British Other % of Population
+OtherAllPc,OtherAll_pc
+OthrEGAPOP,(Census2011) Other Ethnic Group Arab % of Population
+OthrEGOPOP,(Census2011) Other Ethnic Group Other % of Population
+IndxOfMlDS,(IMD2019) Index of Multiple Deprivation (IMD) Score (Higher Score = More Deprived)
+IncomeScor,(IMD2019) Income Score (rate) (Higher Score = More Deprived)
+EmplymntSc,(IMD2019) Employment Score (rate) (Higher Score = More Deprived)
+EdctnSkATS,"(IMD2019) Education, Skills and Training Score (Higher Score = More Deprived)"
+HlthDprADS,(IMD2019) Health Deprivation and Disability Score (Higher Score = More Deprived)
+CrimeScore,(IMD2019) Crime Score (Higher Score = More Deprived)
+BrrrsHsASS,(IMD2019) Barriers to Housing and Services Score (Higher Score = More Deprived)
+LvngEnvrnS,(IMD2019) Living Environment Score (Higher Score = More Deprived)
+IncmDpACIS,(IMD2019) Income Deprivation Affecting Children Index (IDACI) Score (rate) (Higher Score = More Deprived)
+IncmDpAOPS,(IMD2019) Income Deprivation Affecting Older People (IDAOPI) Score (rate) (Higher Score = More Deprived)
+ChldAYPSDS,(IMD2019) Children and Young People Sub-domain Score (Higher Score = More Deprived)
+AdltSklSDS,(IMD2019) Adult Skills Sub-domain Score (Higher Score = More Deprived)
+GgrphcBSDS,(IMD2019) Geographical Barriers Sub-domain Score (Higher Score = More Deprived)
+WdrBrrrSDS,(IMD2019) Wider Barriers Sub-domain Score (Higher Score = More Deprived)
+IndrsSbDmS,(IMD2019) Indoors Sub-domain Score (Higher Score = More Deprived)
+OtdrsSbDmS,(IMD2019) Outdoors Sub-domain Score (Higher Score = More Deprived)
+TtlPpM2015,(IMD2019) Total population: mid 2015 (excluding prisoners)
+DCA0_15M20,(IMD2019) Dependent Children aged 0-15: mid 2015 (excluding prisoners)
+PA16_59M20,(IMD2019) Population aged 16-59: mid 2015 (excluding prisoners)
+OPA60AOM20,(IMD2019) Older population aged 60 and over: mid 2015 (excluding prisoners)
+WAP18_59_6,(IMD2019) Working age population 18-59/64 (excluding prisoners)
+LEAB2009_2,(ONS) Life Expectancy at Birth 2009-2013
+AccssbltGP,(AHAH2017) Accessibility to GP practices (Reverse Scored: Higher Scores = Greater Accessibility)
+AccssblAEH,(AHAH2017) Accessibility to A&E Hospitals (Reverse Scored: Higher Scores = Greater Accessibility)
+AccssbltyD,(AHAH2017) Accessibility to Dentists (Reverse Scored: Higher Scores = Greater Accessibility)
+AccssbltyP,(AHAH2017) Accessibility to Pharmacies (Reverse Scored: Higher Scores = Greater Accessibility)
+AccssbltGO,(AHAH2017) Accessibility to Gambling outlets (Higher = Greater Access) (Reverse Scored: Higher Scores = Greater Accessibility)
+AccssblFFO,(AHAH2017) Accessibility to Fast food outlets  (Higher = Greater Access) (Reverse Scored: Higher Scores = Greater Accessibility)
+AccssblPBN,(AHAH2017) Accessibility to Pubs/bars/nightclubs  (Higher = Greater Access) (Reverse Scored: Higher Scores = Greater Accessibility)
+AccssbltLC,(AHAH2017) Accessibility to Leisure Centers (Reverse Scored: Higher Scores = Greater Accessibility)
+AccssbltBS,(AHAH2017) Accessibility to Blue Space (Reverse Scored: Higher Scores = Greater Accessibility)
+AccssbltOL,(AHAH2017) Accessibility to Off licenses (Higher = Greater Access) (Reverse Scored: Higher Scores = Greater Accessibility)
+AccssbltyT,(AHAH2017) Accessibility to Tobacconists (Higher = Greater Access) (Reverse Scored: Higher Scores = Greater Accessibility)
+GrnSpcPssv,(AHAH2017) Green Space - Passive (total green space within a 900-meter buffer) (Reverse Scored: Higher Scores = Greater Accessibility)
+AccssblGSA,(AHAH2017) Accessibility to Green Space - Active (Reverse Scored: Higher Scores = Greater Accessibility)
+LvlOfNtrgD,(AHAH2017) Level of Nitrogen Dioxide (NO2)
+LvlOfPrtcM,(AHAH2017) Level of Particulate Matter (PM10)
+LvlOfSlphD,(AHAH2017) Level of Sulphur Dioxide (SO2)
+MdnHsP2017,(ONS) Median House Price 2017
+MdnHsP2018,(ONS) Median House Price 2018
+EmCSUILWAP,(JTS2017) Employment Centre Service users in LSOA = working age population (16-74 years old)
+TEC100_499JBP,(JTS2017) Travel time in minutes to nearest employment centre with 100 to 499 jobs by PT/walk
+TrvlEmplymntCntr100_499JbsByCy,(JTS2017) Travel time in minutes to nearest employment centre with 100 to 499 jobs by cycle
+TrvlEmplymntCntr100_499JbsByCr,(JTS2017) Travel time in minutes to nearest employment centre with 100 to 499 jobs by car
+TEC500_4999JBP,(JTS2017) Travel time in minutes to nearest employment centre with 500 to 4999 jobs by PT/walk
+TrvlEmplymntCntr500_4999JbsByCy,(JTS2017) Travel time in minutes to nearest employment centre with 500 to 4999 jobs by cycle
+TrvlEmplymntCntr500_4999JbsByCr,(JTS2017) Travel time in minutes to nearest employment centre with 500 to 4999 jobs by car
+TEC5000JBP,(JTS2017) Travel time in minutes to nearest employment centre with at least 5000 jobs by PT/walk
+TrvlEmplymntCntr5000JbsByCy,(JTS2017) Travel time in minutes to nearest employment centre with at least 5000 jobs by cycle
+TrvlEmplymntCntr5000JbsByCr,(JTS2017) Travel time in minutes to nearest employment centre with at least 5000 jobs by car
+NmbrOfHsIL,(JTS2017) Number of households in LSOA
+TrvlFdSBPW,(JTS2017) Travel time in minutes to nearest food store by PT/walk
+TrvlFdSrByCy,(JTS2017) Travel time in minutes to nearest food store by cycle
+TrvlFdSrByCr,(JTS2017) Travel time in minutes to nearest food store by car
+TrvlWnCBPW,(JTS2017) Travel time in minutes to nearest town centre by PT/walk
+TrvlWnCntrByCy,(JTS2017) Travel time in minutes to nearest town centre by cycle
+TrvlWnCntrByCr,(JTS2017) Travel time in minutes to nearest town centre by car
+NOWCBCI60M,(JTS2017) Number of town centres by car within 60 minutes
+TrvlGpByPW,(JTS2017) Travel time in minutes to nearest GP by PT/walk
+NOGPBPWI15,(JTS2017) Number of GPs by PT/walk within 15 minutes
+NOGPBPWI30,(JTS2017) Number of GPs by PT/walk within 30 minutes
+TrvlGpByCy,(JTS2017) Travel time in minutes to nearest GP by cycle
+NmbrOfGPsByCyI30M,(JTS2017) Number of GPs by cycle within 30 minutes
+TrvlGpByCr,(JTS2017) Travel time in minutes to nearest GP by car
+NmbrOfGPsByCrI30M,(JTS2017) Number of GPs by car within 30 minutes
+TrvlHspBPW,(JTS2017) Travel time in minutes to nearest hospital by PT/walk
+TrvlHsptlByCy,(JTS2017) Travel time in minutes to nearest hospital by cycle
+TrvlHsptlByCr,(JTS2017) Travel time in minutes to nearest hospital by car
+PrmrySSUIL,(JTS2017) Primary School Service users in LSOA (population aged 5-10 years)
+TrvlPrSBPW,(JTS2017) Travel time in minutes to nearest primary schools by PT/walk
+TrvlPrmrySchlsByCy,(JTS2017) Travel time in minutes to nearest primary schools by cycle
+TrvlPrmrySchlsByCr,(JTS2017) Travel time in minutes to nearest primary schools by car
+SSSUILPA11,(JTS2017) Secondary School Service users in LSOA = population aged 11-15 years
+TrvlScSBPW,(JTS2017) Travel time in minutes to nearest secondary school by PT/walk
+TrvlScndrySchlByCy,(JTS2017) Travel time in minutes to nearest secondary school by cycle
+TrvlScndrySchlByCr,(JTS2017) Travel time in minutes to nearest secondary school by car
+FrthrESUIL,(JTS2017) Further Education Service users in LSOA (population aged 16-19 years)
+TrvlFECBPW,(JTS2017) Travel time in minutes to nearest further education colleges by PT/walk
+TrvlFrthrEdctnCllgsByCy,(JTS2017) Travel time in minutes to nearest further education colleges by cycle
+TrvlFrthrEdctnCllgsByCr,(JTS2017) Travel time in minutes to nearest further education colleges by car

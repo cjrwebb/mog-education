@@ -5,13 +5,23 @@ output:
     
 ---
 
-<h1>Welcome to __MOG__ (alpha), the Mapping Overlaps Gadget for local authorities in England and Wales.</h1>
+```{r setup, include = FALSE}
+library("tidyverse")
+library("htmlTable")
+library("kableExtra")
+
+variable_list <- read_csv("data/lsoa_dataset_labelsv3.csv")
+
+```
+
+
+<h1>Welcome to __MOG__ (alpha), the Mapping Overlaps Gadget for local authorities in England and Wales, and Health and Social Care Trusts in Northern Ireland.</h1>
 
 <br>
 
-__MOG__ is a Shiny app for visualising neighbourhood level data in England and some of Wales by Local Authority. It combines a collection of open data from the Office of National Statistics (ONS), the Consumer Data Research Centre (CDRC), the Department for Communities and Local Government (DCLG), and the Department for Transport (DfT).
+__MOG__ is a Shiny app for visualising neighbourhood level data in England and some of Wales by Local Authority. It combines a collection of open data from the Office of National Statistics (ONS), the Consumer Data Research Centre (CDRC), the Department for Communities and Local Government (DCLG), and the Department for Transport (DfT), StatsWales, and NISRA (Northern Ireland).
 
-All data is at the [Lower Super Output Area](https://www.ons.gov.uk/methodology/geography/ukgeographies/censusgeography){target="_blank"} level. There are 104 variables for England, 82 variables for Wales, and 45 shared variables; at the moment, the data included comes from the following open data sources:
+All data is at the [Lower Super Output Area](https://www.ons.gov.uk/methodology/geography/ukgeographies/censusgeography){target="_blank"} level (or equivalent in NI or Wales). There are 104 variables for England, 82 variables for Wales, and 45 shared variables between England and Wales. There are 50 variables for Northern Ireland. At the moment, the data included comes from the following government open data sources:
 
 * Data from the Indices of Multiple Deprivation 2019
 * Data from the 2011 Census relating to Ethnicity
@@ -20,6 +30,8 @@ All data is at the [Lower Super Output Area](https://www.ons.gov.uk/methodology/
 * Journey Time Statistics for Key Services (2017)
 * Access to Healthy Assets and Hazards (AHAH) 2017
 * StatsWales
+* Northern Ireland Statistics and Research Agency
+* Northern Ireland Indices of Multiple Deprivation 2017
 
 The __MOG__ contains two features:
 
@@ -29,6 +41,8 @@ The __MOG__ contains two features:
 Univariate maps are the kind of maps that are available on many websites, for example, [from the CDRC](https://maps.cdrc.ac.uk/#/geodemographics/imde2019/default/BTTTFFT/10/-0.1500/51.5200/){target="_blank"}. 
 
 The __MOG__ also allows you to create simple bivariate, or overlap, maps. These types of maps combine values of two different variables to assess their relationship by mixing their colour palette. The idea and templates for some of the code came from [this blog post](https://timogrossenbacher.ch/2019/04/bivariate-maps-with-ggplot2-and-sf/){target="_blank"} by Timo Grossenbacher, who created a far more beautiful static bivariate map. 
+
+The __MOG__ education version also allows for simple correlations, ANOVA tests, and linear models.
 
 I hope that people will find some interesting ways to use the __MOG__. I've written a blog post, [hosted here](http://calumwebb.uk/posts/mog-alpha-launch/){target="_blank"}, with an example of how the maps can be used for scoping out potential research projects or local policy initiatives. 
 
@@ -45,11 +59,25 @@ Known bugs:
 
 * Occassionally a neighbourhood is rendered with a non-transparent fill making it look like the value is more extreme. 
 * Univariate maps for house price data (and possibly other data with missing values) do not plot correctly in univariate plots. They do work in bivariate plots. Fixed 13.01.2019
+* Hoverbox info only appears when hovering over boundaries, which can make it unclear which boundary it's referring to.
+
+***
+
+Full list of variables:
+
+```{r, echo = FALSE}
+
+kable(variable_list, col.names = c("Variable Name", "Variable Description")) %>%
+  kable_styling(bootstrap_options = c("striped","hover", "condensed", "responsive"))
+
+```
+
+
 
 
 ***
 
-The __MOG__ was created by [Calum Webb](https://www.sheffield.ac.uk/socstudies/staff/staff-profiles/calum-webb) using the following `R` packages:
+The __MOG__ was created by [Calum Webb](www.calumwebb.uk) using the following `R` packages:
 
 * <p>Chang W, Borges Ribeiro B (2018).
 <em>shinydashboard: Create Dashboards with 'Shiny'</em>.

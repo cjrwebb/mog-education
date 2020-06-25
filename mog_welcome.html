@@ -2,11 +2,11 @@
 
 
 <h1>
-Welcome to <strong>MOG</strong> (alpha), the Mapping Overlaps Gadget for local authorities in England and Wales.
+Welcome to <strong>MOG</strong> (alpha), the Mapping Overlaps Gadget for local authorities in England and Wales, and Health and Social Care Trusts in Northern Ireland.
 </h1>
 <p><br></p>
-<p><strong>MOG</strong> is a Shiny app for visualising neighbourhood level data in England and some of Wales by Local Authority. It combines a collection of open data from the Office of National Statistics (ONS), the Consumer Data Research Centre (CDRC), the Department for Communities and Local Government (DCLG), and the Department for Transport (DfT).</p>
-<p>All data is at the <a href="https://www.ons.gov.uk/methodology/geography/ukgeographies/censusgeography" target="_blank">Lower Super Output Area</a> level. There are 104 variables for England, 82 variables for Wales, and 45 shared variables; at the moment, the data included comes from the following open data sources:</p>
+<p><strong>MOG</strong> is a Shiny app for visualising neighbourhood level data in England and some of Wales by Local Authority. It combines a collection of open data from the Office of National Statistics (ONS), the Consumer Data Research Centre (CDRC), the Department for Communities and Local Government (DCLG), and the Department for Transport (DfT), StatsWales, and NISRA (Northern Ireland).</p>
+<p>All data is at the <a href="https://www.ons.gov.uk/methodology/geography/ukgeographies/censusgeography" target="_blank">Lower Super Output Area</a> level (or equivalent in NI or Wales). There are 104 variables for England, 82 variables for Wales, and 45 shared variables between England and Wales. There are 50 variables for Northern Ireland. At the moment, the data included comes from the following government open data sources:</p>
 <ul>
 <li>Data from the Indices of Multiple Deprivation 2019</li>
 <li>Data from the 2011 Census relating to Ethnicity</li>
@@ -15,6 +15,8 @@ Welcome to <strong>MOG</strong> (alpha), the Mapping Overlaps Gadget for local a
 <li>Journey Time Statistics for Key Services (2017)</li>
 <li>Access to Healthy Assets and Hazards (AHAH) 2017</li>
 <li>StatsWales</li>
+<li>Northern Ireland Statistics and Research Agency</li>
+<li>Northern Ireland Indices of Multiple Deprivation 2017</li>
 </ul>
 <p>The <strong>MOG</strong> contains two features:</p>
 <ul>
@@ -23,6 +25,7 @@ Welcome to <strong>MOG</strong> (alpha), the Mapping Overlaps Gadget for local a
 </ul>
 <p>Univariate maps are the kind of maps that are available on many websites, for example, <a href="https://maps.cdrc.ac.uk/#/geodemographics/imde2019/default/BTTTFFT/10/-0.1500/51.5200/" target="_blank">from the CDRC</a>.</p>
 <p>The <strong>MOG</strong> also allows you to create simple bivariate, or overlap, maps. These types of maps combine values of two different variables to assess their relationship by mixing their colour palette. The idea and templates for some of the code came from <a href="https://timogrossenbacher.ch/2019/04/bivariate-maps-with-ggplot2-and-sf/" target="_blank">this blog post</a> by Timo Grossenbacher, who created a far more beautiful static bivariate map.</p>
+<p>The <strong>MOG</strong> education version also allows for simple correlations, ANOVA tests, and linear models.</p>
 <p>I hope that people will find some interesting ways to use the <strong>MOG</strong>. I’ve written a blog post, <a href="http://calumwebb.uk/posts/mog-alpha-launch/" target="_blank">hosted here</a>, with an example of how the maps can be used for scoping out potential research projects or local policy initiatives.</p>
 <p>If you have any comments or suggestions you can find my contact details <a href="https://www.sheffield.ac.uk/socstudies/staff/staff-profiles/calum-webb" target="_blank">here</a>.</p>
 <p>Best wishes and thanks for trying out the <strong>MOG</strong>,</p>
@@ -32,9 +35,1754 @@ Welcome to <strong>MOG</strong> (alpha), the Mapping Overlaps Gadget for local a
 <ul>
 <li>Occassionally a neighbourhood is rendered with a non-transparent fill making it look like the value is more extreme.</li>
 <li>Univariate maps for house price data (and possibly other data with missing values) do not plot correctly in univariate plots. They do work in bivariate plots. Fixed 13.01.2019</li>
+<li>Hoverbox info only appears when hovering over boundaries, which can make it unclear which boundary it’s referring to.</li>
 </ul>
 <hr />
-<p>The <strong>MOG</strong> was created by <a href="https://www.sheffield.ac.uk/socstudies/staff/staff-profiles/calum-webb">Calum Webb</a> using the following <code>R</code> packages:</p>
+<p>Full list of variables:</p>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable Name
+</th>
+<th style="text-align:left;">
+Variable Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+LSOA_code
+</td>
+<td style="text-align:left;">
+LSOA_code
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LA_name
+</td>
+<td style="text-align:left;">
+LA_name
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MSOA11CD
+</td>
+<td style="text-align:left;">
+MSOA11CD
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ImdS2015IW
+</td>
+<td style="text-align:left;">
+(IMD2015) IMD Score 2015 (Higher = More Deprived) including Wales
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WhtPrcntOP
+</td>
+<td style="text-align:left;">
+(Census2011) White (All Categories) % of Population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WhtBrtsPOP
+</td>
+<td style="text-align:left;">
+(Census2011) White British % of Population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WhtIrshPOP
+</td>
+<td style="text-align:left;">
+(Census2011) White Irish % of Population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WhtTrvlPOP
+</td>
+<td style="text-align:left;">
+(Census2011) White Traveller % of Population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WhtOthrPOP
+</td>
+<td style="text-align:left;">
+(Census2011) White Other % of Population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MxdHrtgPOP
+</td>
+<td style="text-align:left;">
+(Census2011) Mixed Heritage (All Categories) % of Population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MxdHWBCPOP
+</td>
+<td style="text-align:left;">
+(Census2011) Mixed Heritage White/Black Caribbean % of Population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MxdHWBAPOP
+</td>
+<td style="text-align:left;">
+(Census2011) Mixed Heritage White/Black African % of Population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MxdHrWAPOP
+</td>
+<td style="text-align:left;">
+(Census2011) Mixed Heritage White/Asian % of Population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MxdHrtOPOP
+</td>
+<td style="text-align:left;">
+(Census2011) Mixed Heritage Other % of Population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AsnBrtAPOP
+</td>
+<td style="text-align:left;">
+(Census2011) Asian/British Asian (All Categories) % of Population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AsnBrAIPOP
+</td>
+<td style="text-align:left;">
+(Census2011) Asian/British Asian Indian % of Population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AsnBrAPPOP
+</td>
+<td style="text-align:left;">
+(Census2011) Asian/British Asian Pakistani % of Population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AsnBrABPOP
+</td>
+<td style="text-align:left;">
+(Census2011) Asian/British Asian Bangladeshi % of Population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AsnBrACPOP
+</td>
+<td style="text-align:left;">
+(Census2011) Asian/British Asian Chinese % of Population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AsnBrAOPOP
+</td>
+<td style="text-align:left;">
+(Census2011) Asian/British Asian Other % of Population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BlckBlBPOP
+</td>
+<td style="text-align:left;">
+(Census2011) Black/Black British (All Categories) % of Population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BlckBBAPOP
+</td>
+<td style="text-align:left;">
+(Census2011) Black/Black British African % of Population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BlckBBCPOP
+</td>
+<td style="text-align:left;">
+(Census2011) Black/Black British Caribbean % of Population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BlckBBOPOP
+</td>
+<td style="text-align:left;">
+(Census2011) Black/Black British Other % of Population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+OtherAllPc
+</td>
+<td style="text-align:left;">
+OtherAll_pc
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+OthrEGAPOP
+</td>
+<td style="text-align:left;">
+(Census2011) Other Ethnic Group Arab % of Population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+OthrEGOPOP
+</td>
+<td style="text-align:left;">
+(Census2011) Other Ethnic Group Other % of Population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+IndxOfMlDS
+</td>
+<td style="text-align:left;">
+(IMD2019 England Only) Index of Multiple Deprivation (IMD) Score (Higher Score = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+IncomeScor
+</td>
+<td style="text-align:left;">
+(IMD2019 England Only) Income Score (rate) (Higher Score = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+EmplymntSc
+</td>
+<td style="text-align:left;">
+(IMD2019 England Only) Employment Score (rate) (Higher Score = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+EdctnSkATS
+</td>
+<td style="text-align:left;">
+(IMD2019 England Only) Education, Skills and Training Score (Higher Score = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+HlthDprADS
+</td>
+<td style="text-align:left;">
+(IMD2019 England Only) Health Deprivation and Disability Score (Higher Score = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CrimeScore
+</td>
+<td style="text-align:left;">
+(IMD2019 England Only) Crime Score (Higher Score = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BrrrsHsASS
+</td>
+<td style="text-align:left;">
+(IMD2019 England Only) Barriers to Housing and Services Score (Higher Score = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LvngEnvrnS
+</td>
+<td style="text-align:left;">
+(IMD2019 England Only) Living Environment Score (Higher Score = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+IncmDpACIS
+</td>
+<td style="text-align:left;">
+(IMD2019 England Only) Income Deprivation Affecting Children Index (IDACI) Score (rate) (Higher Score = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+IncmDpAOPS
+</td>
+<td style="text-align:left;">
+(IMD2019 England Only) Income Deprivation Affecting Older People (IDAOPI) Score (rate) (Higher Score = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ChldAYPSDS
+</td>
+<td style="text-align:left;">
+(IMD2019 England Only) Children and Young People Sub-domain Score (Higher Score = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AdltSklSDS
+</td>
+<td style="text-align:left;">
+(IMD2019 England Only) Adult Skills Sub-domain Score (Higher Score = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GgrphcBSDS
+</td>
+<td style="text-align:left;">
+(IMD2019 England Only) Geographical Barriers Sub-domain Score (Higher Score = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WdrBrrrSDS
+</td>
+<td style="text-align:left;">
+(IMD2019 England Only) Wider Barriers Sub-domain Score (Higher Score = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+IndrsSbDmS
+</td>
+<td style="text-align:left;">
+(IMD2019 England Only) Indoors Sub-domain Score (Higher Score = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+OtdrsSbDmS
+</td>
+<td style="text-align:left;">
+(IMD2019 England Only) Outdoors Sub-domain Score (Higher Score = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TtlPpM2015
+</td>
+<td style="text-align:left;">
+(IMD2019 England Only) Total population: mid 2015 (excluding prisoners)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DCA0_15M20
+</td>
+<td style="text-align:left;">
+(IMD2019 England Only) Dependent Children aged 0-15: mid 2015 (excluding prisoners)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PA16_59M20
+</td>
+<td style="text-align:left;">
+(IMD2019 England Only) Population aged 16-59: mid 2015 (excluding prisoners)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+OPA60AOM20
+</td>
+<td style="text-align:left;">
+(IMD2019 England Only) Older population aged 60 and over: mid 2015 (excluding prisoners)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WAP18_59_6
+</td>
+<td style="text-align:left;">
+(IMD2019 England Only) Working age population 18-59/64 (excluding prisoners)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LEAB2009_2
+</td>
+<td style="text-align:left;">
+(ONS England Only) Life Expectancy at Birth 2009-2013
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AccssbltGP
+</td>
+<td style="text-align:left;">
+(AHAH2017 England &amp; Wales) Accessibility to GP practices (Reverse Scored: Higher Scores = Greater Accessibility)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AccssblAEH
+</td>
+<td style="text-align:left;">
+(AHAH2017 England &amp; Wales) Accessibility to A&amp;E Hospitals (Reverse Scored: Higher Scores = Greater Accessibility)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AccssbltyD
+</td>
+<td style="text-align:left;">
+(AHAH2017 England &amp; Wales) Accessibility to Dentists (Reverse Scored: Higher Scores = Greater Accessibility)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AccssbltyP
+</td>
+<td style="text-align:left;">
+(AHAH2017 England &amp; Wales) Accessibility to Pharmacies (Reverse Scored: Higher Scores = Greater Accessibility)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AccssbltGO
+</td>
+<td style="text-align:left;">
+(AHAH2017 England &amp; Wales) Accessibility to Gambling outlets (Higher = Greater Access) (Reverse Scored: Higher Scores = Greater Accessibility)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AccssblFFO
+</td>
+<td style="text-align:left;">
+(AHAH2017 England &amp; Wales) Accessibility to Fast food outlets (Higher = Greater Access) (Reverse Scored: Higher Scores = Greater Accessibility)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AccssblPBN
+</td>
+<td style="text-align:left;">
+(AHAH2017 England &amp; Wales) Accessibility to Pubs/bars/nightclubs (Higher = Greater Access) (Reverse Scored: Higher Scores = Greater Accessibility)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AccssbltLC
+</td>
+<td style="text-align:left;">
+(AHAH2017 England &amp; Wales) Accessibility to Leisure Centers (Reverse Scored: Higher Scores = Greater Accessibility)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AccssbltBS
+</td>
+<td style="text-align:left;">
+(AHAH2017 England &amp; Wales) Accessibility to Blue Space (Reverse Scored: Higher Scores = Greater Accessibility)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AccssbltOL
+</td>
+<td style="text-align:left;">
+(AHAH2017 England &amp; Wales) Accessibility to Off licenses (Higher = Greater Access) (Reverse Scored: Higher Scores = Greater Accessibility)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AccssbltyT
+</td>
+<td style="text-align:left;">
+(AHAH2017 England &amp; Wales) Accessibility to Tobacconists (Higher = Greater Access) (Reverse Scored: Higher Scores = Greater Accessibility)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GrnSpcPssv
+</td>
+<td style="text-align:left;">
+(AHAH2017 England &amp; Wales) Green Space - Passive (total green space within a 900-meter buffer) (Reverse Scored: Higher Scores = Greater Accessibility)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AccssblGSA
+</td>
+<td style="text-align:left;">
+(AHAH2017 England &amp; Wales) Accessibility to Green Space - Active (Reverse Scored: Higher Scores = Greater Accessibility)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LvlOfNtrgD
+</td>
+<td style="text-align:left;">
+(AHAH2017 England &amp; Wales) Level of Nitrogen Dioxide (NO2)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LvlOfPrtcM
+</td>
+<td style="text-align:left;">
+(AHAH2017 England &amp; Wales) Level of Particulate Matter (PM10)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LvlOfSlphD
+</td>
+<td style="text-align:left;">
+(AHAH2017 England &amp; Wales) Level of Sulphur Dioxide (SO2)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MdnHsP2017
+</td>
+<td style="text-align:left;">
+(ONS England &amp; Wales) Median House Price 2017
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MdnHsP2018
+</td>
+<td style="text-align:left;">
+(ONS England &amp; Wales) Median House Price 2018
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+EmCSUILWAP
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Employment Centre Service users in LSOA = working age population (16-74 years old)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TEC100_499JBP
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest employment centre with 100 to 499 jobs by PT/walk
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlEmplymntCntr100_499JbsByCy
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest employment centre with 100 to 499 jobs by cycle
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlEmplymntCntr100_499JbsByCr
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest employment centre with 100 to 499 jobs by car
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TEC500_4999JBP
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest employment centre with 500 to 4999 jobs by PT/walk
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlEmplymntCntr500_4999JbsByCy
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest employment centre with 500 to 4999 jobs by cycle
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlEmplymntCntr500_4999JbsByCr
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest employment centre with 500 to 4999 jobs by car
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TEC5000JBP
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest employment centre with at least 5000 jobs by PT/walk
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlEmplymntCntr5000JbsByCy
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest employment centre with at least 5000 jobs by cycle
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlEmplymntCntr5000JbsByCr
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest employment centre with at least 5000 jobs by car
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NmbrOfHsIL
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Number of households in LSOA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlFdSBPW
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest food store by PT/walk
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlFdSrByCy
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest food store by cycle
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlFdSrByCr
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest food store by car
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlWnCBPW
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest town centre by PT/walk
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlWnCntrByCy
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest town centre by cycle
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlWnCntrByCr
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest town centre by car
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NOWCBCI60M
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Number of town centres by car within 60 minutes
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlGpByPW
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest GP by PT/walk
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlGpByCy
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest GP by cycle
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlGpByCr
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest GP by car
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlHspBPW
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest hospital by PT/walk
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlHsptlByCy
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest hospital by cycle
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlHsptlByCr
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest hospital by car
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PrmrySSUIL
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Primary School Service users in LSOA (population aged 5-10 years)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlPrSBPW
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest primary schools by PT/walk
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlPrmrySchlsByCy
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest primary schools by cycle
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlPrmrySchlsByCr
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest primary schools by car
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SSSUILPA11
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Secondary School Service users in LSOA = population aged 11-15 years
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlScSBPW
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest secondary school by PT/walk
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlScndrySchlByCy
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest secondary school by cycle
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlScndrySchlByCr
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest secondary school by car
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FrthrESUIL
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Further Education Service users in LSOA (population aged 16-19 years)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlFECBPW
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest further education colleges by PT/walk
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlFrthrEdctnCllgsByCy
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest further education colleges by cycle
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TrvlFrthrEdctnCllgsByCr
+</td>
+<td style="text-align:left;">
+(JTS2017 England Only) Travel time in minutes to nearest further education colleges by car
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LsoaName
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) LSOA_name
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PplInIncmD
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) People in income deprivation (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WrkngAPIED
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Working-age people in employment deprivation (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GpRcrddChC
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) GP-recorded chronic condition (rate per 100) (1)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LmtngLngTI
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Limiting long-term illness (rate per 100)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PrematrDth
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Premature death (rate per 100,000)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GpRcrddMHC
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) GP-recorded mental health condition (rate per 100) (1)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CncrIncdnc
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Cancer incidence (rate per 100,000)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LwBrthWght
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Low birth weight (live single births less than 2.5kg) (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FndtnPhAPS
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Foundation Phase Average Point Score
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+KyStg2AvPS
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Key Stage 2 average point score
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+KyStg4AvPS
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Key Stage 4 average point score
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RptAbsntsm
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Repeat Absenteeism (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+KyStg4LEHE
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Key Stage 4 leavers entering Higher Education (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AdA25_64NQ
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Adults aged 25-64 with no qualifications (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PrUOBA30MS
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) % Unavailability of broadband at 30Mb/s
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AvrgPbRTTAP
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Average public return travel time to a pharmacy (minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AvrgPbRTTAFS
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Average public return travel time to a food shop (minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AvrgPbRTTAGS
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Average public return travel time to a GP surgery (minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AvrgPbRTTAPO
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Average public return travel time to a post office (minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AvrgPbRTTAPS
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Average public return travel time to a primary school (minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AvrgPbRTTAPL
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Average public return travel time to a public library (minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AvrgPbRTTASF
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Average public return travel time to a sports facility (minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AvrgPbRTTASS
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Average public return travel time to a secondary school (minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AvrgPrRTTAP
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Average private return travel time to a pharmacy (minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AvrgPrRTTAFS
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Average private return travel time to a food shop (minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AvrgPrRTTAGS
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Average private return travel time to a GP surgery (minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AvrgPrRTTAPO
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Average private return travel time to a post office (minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AvrgPrvtRtrnTrvlTmAPrS
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Average private return travel time to a primary school (minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AvrgPrRTTAPL
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Average private return travel time to a public library (minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AvrgPrRTTASF
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Average private return travel time to a sports facility (minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AvrgPrRTTASS
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Average private return travel time to a secondary school (minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AvrgPrvtRtrnTrvlTmAPtS
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Average private return travel time to a petrol station (minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PplInOvrcH
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) People in overcrowded households (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LklhdOfPQH
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Likelihood of poor quality housing (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LklhdOHCSH
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Likelihood of housing containing serious hazards (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LklhdOHBID
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Likelihood of housing being in disrepair (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PplWACVFND
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Population Weighted Average Concentration Value for Nitrogen Dioxide
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PWACVFP10Μ
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Population Weighted Average Concentration Value for Particulates &lt; 10 µm
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PWACVFP2_5
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Population Weighted Average Concentration Value for Particulates &lt; 2.5 µm
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+HshldAROFS
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Households at risk of flooding score
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PrxmtANGSS
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Proximity to accessible natural green space score (% of households)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AmbntGrnSS
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Ambient Green Space Score
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PlcRcrddCD
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Police recorded criminal damage (rate per 100)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PlcRcrddVC
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Police recorded violent crime (rate per 100)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AntSclBhvr
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Anti-Social Behaviour (rate per 100)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PlcRcrddBr
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Police recorded burglary (rate per 100)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PlcRcrddTh
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Police recorded theft (rate per 100)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FirIncdncs
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Fire incidences (rate per 100)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WlshInOMDR
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Welsh Index of Multiple Deprivation Rank
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WlshImdIDR
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Welsh IMD Income Domain Rank (Reverse Scored - Higher Rank = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WlshImdEmDR
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Welsh IMD Employment Domain Rank (Reverse Scored - Higher Rank = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WlshImdHDR
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Welsh IMD Health Domain Rank (Reverse Scored - Higher Rank = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WlshImdEdDR
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Welsh IMD Education Domain Rank (Reverse Scored - Higher Rank = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WlshImdASD
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Welsh IMD Access to Services Domain (Reverse Scored - Higher Rank = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WlshImdCSD
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Welsh IMD Community Safety Domain (Reverse Scored - Higher Rank = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WlshImdPED
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Welsh IMD Physical Environment Domain (Reverse Scored - Higher Rank = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WlshImdHsD
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Welsh IMD Housing Domain (Reverse Scored - Higher Rank = More Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CnSpkRdAWW
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Can speak, read and write Welsh
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CnSpARBCWW
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Can speak and read but cannot write Welsh
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CnSpBCROWW
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Can speak but cannot read or write Welsh
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CnUndrsSWO
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) Can understand spoken Welsh only
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NWlshLnggS
+</td>
+<td style="text-align:left;">
+(StatsWales Wales Only) No Welsh language skills
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_ETHWHPC
+</td>
+<td style="text-align:left;">
+(Northern Ireland Census 2011) Ethnic Group White Percent (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_ETHCHPC
+</td>
+<td style="text-align:left;">
+(Northern Ireland Census 2011) Ethnic Group Chinese Percent (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_ETHITPC
+</td>
+<td style="text-align:left;">
+(Northern Ireland Census 2011) Ethnic Group Irish Traveller Percent (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_ETHINDPC
+</td>
+<td style="text-align:left;">
+(Northern Ireland Census 2011) Ethnic Group Indian Percent (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_ETHPAKPC
+</td>
+<td style="text-align:left;">
+(Northern Ireland Census 2011) Ethnic Group Pakistani Percent (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_ETHBANPC
+</td>
+<td style="text-align:left;">
+(Northern Ireland Census 2011) Ethnic Group Bangladeshi Percent (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_ETHOTHASPC
+</td>
+<td style="text-align:left;">
+(Northern Ireland Census 2011) Ethnic Group Other Asian Percent (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_ETHBLCPC
+</td>
+<td style="text-align:left;">
+(Northern Ireland Census 2011) Ethnic Group Black Caribbean Percent (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_ETHBLAPC
+</td>
+<td style="text-align:left;">
+(Northern Ireland Census 2011) Ethnic Group Black African Percent (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_ETHBLOTHPC
+</td>
+<td style="text-align:left;">
+(Northern Ireland Census 2011) Ethnic Group Black Other Percent (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_ETHMIXPC
+</td>
+<td style="text-align:left;">
+(Northern Ireland Census 2011) Ethnic Group Mixed Percent (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_ETHOTHPC
+</td>
+<td style="text-align:left;">
+(Northern Ireland Census 2011) Ethnic Group Other Percent (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_NIBRITPC
+</td>
+<td style="text-align:left;">
+(Northern Ireland Census 2011) National Identity British Percent (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_NIIRISHPC
+</td>
+<td style="text-align:left;">
+(Northern Ireland Census 2011) National Identity Irish Percent (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_NINORIRIPC
+</td>
+<td style="text-align:left;">
+(Northern Ireland Census 2011) National Identity Northern Irish Percent (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_NIENGPC
+</td>
+<td style="text-align:left;">
+(Northern Ireland Census 2011) National Identity English Percent (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_NISCOTPC
+</td>
+<td style="text-align:left;">
+(Northern Ireland Census 2011) National Identity Scottish Percent (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_NIWELPC
+</td>
+<td style="text-align:left;">
+(Northern Ireland Census 2011) National Identity Welsh Percent (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_NIOTHPC
+</td>
+<td style="text-align:left;">
+(Northern Ireland Census 2011) National Identity Other Percent (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_RELCATHPC
+</td>
+<td style="text-align:left;">
+(Northern Ireland Census 2011) Religion or Religion Brought Up In Catholic Percent (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_RELPROT
+</td>
+<td style="text-align:left;">
+(Northern Ireland Census 2011) Religion or Religion Brought Up In Protestant &amp; Other Christian Percent (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_RELOTH
+</td>
+<td style="text-align:left;">
+(Northern Ireland Census 2011) Religion or Religion Brought Up In Other Religions Percent (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_RELNONE
+</td>
+<td style="text-align:left;">
+(Northern Ireland Census 2011) Religion or Religion Brought Up In None Percent (%)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_MDM_RANK
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Multiple Deprivation Measure where 1 is most deprived
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_INCOME_PERC
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Proportion of the population living in households whose equivalised income is below 60 per cent of the NI median
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_INCOME_CHILD_PERC
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Proportion of the population aged 15 and under living in households whose equivalised income is below 60 per cent of the NI median
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_INCOME_65_PERC
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Proportion of the population aged 65 and over living in households whose equivalised income is below 60 per cent of the NI median
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_EMPL_PERC
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Proportion of the working age population who are employment deprived
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_LBW_PERC
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Proportion of Singleton Births with Low Birth Weight
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_PR_SEN_PERC
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Proportion of pupils attending Special Schools or attending primary school with Special Education Needs Stages 3 to 5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_PR_ABS_PERC
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Absenteeism at Primary Schools of possible attendance
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_PP_GCSE_PERC
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Proportion of school leavers not achieving five or more GCSEs at A star to C and equivalent incl. English and maths
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_PP_NEETS_PERC
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Proportion of those leaving school aged 16 17 and 18 not entering Education Employment or Training
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_PP_HE_PERC
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Proportion of 18-21 year olds who have not enrolled in Higher Education Courses at Higher or Further Education establishments
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_PP_SEN_PERC
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Proportion of pupils attending Special Schools or who are attending post-primary schools with Special Education Needs Stages 3 to 5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_BROADBAND_SPEED
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Proportion of properties with broadband speed below 10Mb per second
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_UNFIT_PERC
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Proportion of domestic dwellings that are unfit
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_DISREPAIR_PERC
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Proportion of domestic dwellings in a state of disrepair
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_ENERGY_PERC
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Proportion of domestic dwellings without 1 modern boiler or 2 loft insulation and double glazing
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_OVERCROWD_PERC
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Rate of Household overcrowding
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_ADAPT_PERC
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Proportion of population with disability without adaptations to dwelling
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_LAPS_PERC
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Proportion of domestic dwellings with Local Area Problem Scores
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_FLOOD_RISK_PERC
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Proportion of properties in flood risk area
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_VIOLENT_RATE
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Rate of Violence including sexual offences robbery and public order per 1000 population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_BURGLARY_RATE
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Rate of Burglary per 1000 population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_THEFT_RATE
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Rate of Theft per 1000 population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_VEH_CRIME_RATE
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Rate of Vehicle Crime per 1000 population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_DRIM_DAM_RATE
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Rate of Criminal Damage and Arson per 1000 population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_DELIB_FIRE_RATE
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Rate of Deliberate Primary and Secondary Fires per 1000 population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NI_ASB_RATE
+</td>
+<td style="text-align:left;">
+(Northern Ireland IMD 2017) Rate of Anti-Social Behaviour Incidents per 1000 population
+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>The <strong>MOG</strong> was created by <a href="www.calumwebb.uk">Calum Webb</a> using the following <code>R</code> packages:</p>
 <ul>
 <li><p>
 Chang W, Borges Ribeiro B (2018). <em>shinydashboard: Create Dashboards with ‘Shiny’</em>. R package version 0.7.1, <a href="https://CRAN.R-project.org/package=shinydashboard">https://CRAN.R-project.org/package=shinydashboard</a>.

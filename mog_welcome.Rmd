@@ -11,6 +11,7 @@ library("htmlTable")
 library("kableExtra")
 
 variable_list <- read_csv("data/lsoa_dataset_labelsv3.csv")
+# 214 variables as of NI update
 
 ```
 

@@ -1,0 +1,217 @@
+var_name,label
+LSOA_code,LSOA_code
+LA_name,LA_name
+MSOA11CD,MSOA11CD
+ImdS2015IW,(IMD2015) IMD Score 2015 (Higher = More Deprived) including Wales
+WhtPrcntOP,(Census2011) White (All Categories) % of Population
+WhtBrtsPOP,(Census2011) White British % of Population
+WhtIrshPOP,(Census2011) White Irish % of Population
+WhtTrvlPOP,(Census2011) White Traveller % of Population
+WhtOthrPOP,(Census2011) White Other % of Population
+MxdHrtgPOP,(Census2011) Mixed Heritage (All Categories) % of Population
+MxdHWBCPOP,(Census2011) Mixed Heritage White/Black Caribbean % of Population
+MxdHWBAPOP,(Census2011) Mixed Heritage White/Black African % of Population
+MxdHrWAPOP,(Census2011) Mixed Heritage White/Asian % of Population
+MxdHrtOPOP,(Census2011) Mixed Heritage Other % of Population
+AsnBrtAPOP,(Census2011) Asian/British Asian (All Categories) % of Population
+AsnBrAIPOP,(Census2011) Asian/British Asian Indian % of Population
+AsnBrAPPOP,(Census2011) Asian/British Asian Pakistani % of Population
+AsnBrABPOP,(Census2011) Asian/British Asian Bangladeshi % of Population
+AsnBrACPOP,(Census2011) Asian/British Asian Chinese % of Population
+AsnBrAOPOP,(Census2011) Asian/British Asian Other % of Population
+BlckBlBPOP,(Census2011) Black/Black British (All Categories) % of Population
+BlckBBAPOP,(Census2011) Black/Black British African % of Population
+BlckBBCPOP,(Census2011) Black/Black British Caribbean % of Population
+BlckBBOPOP,(Census2011) Black/Black British Other % of Population
+OtherAllPc,OtherAll_pc
+OthrEGAPOP,(Census2011) Other Ethnic Group Arab % of Population
+OthrEGOPOP,(Census2011) Other Ethnic Group Other % of Population
+IndxOfMlDS,(IMD2019 England Only) Index of Multiple Deprivation (IMD) Score (Higher Score = More Deprived)
+IncomeScor,(IMD2019 England Only) Income Score (rate) (Higher Score = More Deprived)
+EmplymntSc,(IMD2019 England Only) Employment Score (rate) (Higher Score = More Deprived)
+EdctnSkATS,"(IMD2019 England Only) Education, Skills and Training Score (Higher Score = More Deprived)"
+HlthDprADS,(IMD2019 England Only) Health Deprivation and Disability Score (Higher Score = More Deprived)
+CrimeScore,(IMD2019 England Only) Crime Score (Higher Score = More Deprived)
+BrrrsHsASS,(IMD2019 England Only) Barriers to Housing and Services Score (Higher Score = More Deprived)
+LvngEnvrnS,(IMD2019 England Only) Living Environment Score (Higher Score = More Deprived)
+IncmDpACIS,(IMD2019 England Only) Income Deprivation Affecting Children Index (IDACI) Score (rate) (Higher Score = More Deprived)
+IncmDpAOPS,(IMD2019 England Only) Income Deprivation Affecting Older People (IDAOPI) Score (rate) (Higher Score = More Deprived)
+ChldAYPSDS,(IMD2019 England Only) Children and Young People Sub-domain Score (Higher Score = More Deprived)
+AdltSklSDS,(IMD2019 England Only) Adult Skills Sub-domain Score (Higher Score = More Deprived)
+GgrphcBSDS,(IMD2019 England Only) Geographical Barriers Sub-domain Score (Higher Score = More Deprived)
+WdrBrrrSDS,(IMD2019 England Only) Wider Barriers Sub-domain Score (Higher Score = More Deprived)
+IndrsSbDmS,(IMD2019 England Only) Indoors Sub-domain Score (Higher Score = More Deprived)
+OtdrsSbDmS,(IMD2019 England Only) Outdoors Sub-domain Score (Higher Score = More Deprived)
+TtlPpM2015,(IMD2019 England Only) Total population: mid 2015 (excluding prisoners)
+DCA0_15M20,(IMD2019 England Only) Dependent Children aged 0-15: mid 2015 (excluding prisoners)
+PA16_59M20,(IMD2019 England Only) Population aged 16-59: mid 2015 (excluding prisoners)
+OPA60AOM20,(IMD2019 England Only) Older population aged 60 and over: mid 2015 (excluding prisoners)
+WAP18_59_6,(IMD2019 England Only) Working age population 18-59/64 (excluding prisoners)
+LEAB2009_2,(ONS England Only) Life Expectancy at Birth 2009-2013
+AccssbltGP,(AHAH2017 England & Wales) Accessibility to GP practices (Reverse Scored: Higher Scores = Greater Accessibility)
+AccssblAEH,(AHAH2017 England & Wales) Accessibility to A&E Hospitals (Reverse Scored: Higher Scores = Greater Accessibility)
+AccssbltyD,(AHAH2017 England & Wales) Accessibility to Dentists (Reverse Scored: Higher Scores = Greater Accessibility)
+AccssbltyP,(AHAH2017 England & Wales) Accessibility to Pharmacies (Reverse Scored: Higher Scores = Greater Accessibility)
+AccssbltGO,(AHAH2017 England & Wales) Accessibility to Gambling outlets (Higher = Greater Access) (Reverse Scored: Higher Scores = Greater Accessibility)
+AccssblFFO,(AHAH2017 England & Wales) Accessibility to Fast food outlets  (Higher = Greater Access) (Reverse Scored: Higher Scores = Greater Accessibility)
+AccssblPBN,(AHAH2017 England & Wales) Accessibility to Pubs/bars/nightclubs  (Higher = Greater Access) (Reverse Scored: Higher Scores = Greater Accessibility)
+AccssbltLC,(AHAH2017 England & Wales) Accessibility to Leisure Centers (Reverse Scored: Higher Scores = Greater Accessibility)
+AccssbltBS,(AHAH2017 England & Wales) Accessibility to Blue Space (Reverse Scored: Higher Scores = Greater Accessibility)
+AccssbltOL,(AHAH2017 England & Wales) Accessibility to Off licenses (Higher = Greater Access) (Reverse Scored: Higher Scores = Greater Accessibility)
+AccssbltyT,(AHAH2017 England & Wales) Accessibility to Tobacconists (Higher = Greater Access) (Reverse Scored: Higher Scores = Greater Accessibility)
+GrnSpcPssv,(AHAH2017 England & Wales) Green Space - Passive (total green space within a 900-meter buffer) (Reverse Scored: Higher Scores = Greater Accessibility)
+AccssblGSA,(AHAH2017 England & Wales) Accessibility to Green Space - Active (Reverse Scored: Higher Scores = Greater Accessibility)
+LvlOfNtrgD,(AHAH2017 England & Wales) Level of Nitrogen Dioxide (NO2)
+LvlOfPrtcM,(AHAH2017 England & Wales) Level of Particulate Matter (PM10)
+LvlOfSlphD,(AHAH2017 England & Wales) Level of Sulphur Dioxide (SO2)
+MdnHsP2017,(ONS England & Wales) Median House Price 2017
+MdnHsP2018,(ONS England & Wales) Median House Price 2018
+EmCSUILWAP,(JTS2017 England Only) Employment Centre Service users in LSOA = working age population (16-74 years old)
+TEC100_499JBP,(JTS2017 England Only) Travel time in minutes to nearest employment centre with 100 to 499 jobs by PT/walk
+TrvlEmplymntCntr100_499JbsByCy,(JTS2017 England Only) Travel time in minutes to nearest employment centre with 100 to 499 jobs by cycle
+TrvlEmplymntCntr100_499JbsByCr,(JTS2017 England Only) Travel time in minutes to nearest employment centre with 100 to 499 jobs by car
+TEC500_4999JBP,(JTS2017 England Only) Travel time in minutes to nearest employment centre with 500 to 4999 jobs by PT/walk
+TrvlEmplymntCntr500_4999JbsByCy,(JTS2017 England Only) Travel time in minutes to nearest employment centre with 500 to 4999 jobs by cycle
+TrvlEmplymntCntr500_4999JbsByCr,(JTS2017 England Only) Travel time in minutes to nearest employment centre with 500 to 4999 jobs by car
+TEC5000JBP,(JTS2017 England Only) Travel time in minutes to nearest employment centre with at least 5000 jobs by PT/walk
+TrvlEmplymntCntr5000JbsByCy,(JTS2017 England Only) Travel time in minutes to nearest employment centre with at least 5000 jobs by cycle
+TrvlEmplymntCntr5000JbsByCr,(JTS2017 England Only) Travel time in minutes to nearest employment centre with at least 5000 jobs by car
+NmbrOfHsIL,(JTS2017 England Only) Number of households in LSOA
+TrvlFdSBPW,(JTS2017 England Only) Travel time in minutes to nearest food store by PT/walk
+TrvlFdSrByCy,(JTS2017 England Only) Travel time in minutes to nearest food store by cycle
+TrvlFdSrByCr,(JTS2017 England Only) Travel time in minutes to nearest food store by car
+TrvlWnCBPW,(JTS2017 England Only) Travel time in minutes to nearest town centre by PT/walk
+TrvlWnCntrByCy,(JTS2017 England Only) Travel time in minutes to nearest town centre by cycle
+TrvlWnCntrByCr,(JTS2017 England Only) Travel time in minutes to nearest town centre by car
+NOWCBCI60M,(JTS2017 England Only) Number of town centres by car within 60 minutes
+TrvlGpByPW,(JTS2017 England Only) Travel time in minutes to nearest GP by PT/walk
+TrvlGpByCy,(JTS2017 England Only) Travel time in minutes to nearest GP by cycle
+TrvlGpByCr,(JTS2017 England Only) Travel time in minutes to nearest GP by car
+TrvlHspBPW,(JTS2017 England Only) Travel time in minutes to nearest hospital by PT/walk
+TrvlHsptlByCy,(JTS2017 England Only) Travel time in minutes to nearest hospital by cycle
+TrvlHsptlByCr,(JTS2017 England Only) Travel time in minutes to nearest hospital by car
+PrmrySSUIL,(JTS2017 England Only) Primary School Service users in LSOA (population aged 5-10 years)
+TrvlPrSBPW,(JTS2017 England Only) Travel time in minutes to nearest primary schools by PT/walk
+TrvlPrmrySchlsByCy,(JTS2017 England Only) Travel time in minutes to nearest primary schools by cycle
+TrvlPrmrySchlsByCr,(JTS2017 England Only) Travel time in minutes to nearest primary schools by car
+SSSUILPA11,(JTS2017 England Only) Secondary School Service users in LSOA = population aged 11-15 years
+TrvlScSBPW,(JTS2017 England Only) Travel time in minutes to nearest secondary school by PT/walk
+TrvlScndrySchlByCy,(JTS2017 England Only) Travel time in minutes to nearest secondary school by cycle
+TrvlScndrySchlByCr,(JTS2017 England Only) Travel time in minutes to nearest secondary school by car
+FrthrESUIL,(JTS2017 England Only) Further Education Service users in LSOA (population aged 16-19 years)
+TrvlFECBPW,(JTS2017 England Only) Travel time in minutes to nearest further education colleges by PT/walk
+TrvlFrthrEdctnCllgsByCy,(JTS2017 England Only) Travel time in minutes to nearest further education colleges by cycle
+TrvlFrthrEdctnCllgsByCr,(JTS2017 England Only) Travel time in minutes to nearest further education colleges by car
+LsoaName,(StatsWales Wales Only) LSOA_name
+PplInIncmD,(StatsWales Wales Only) People in income deprivation (%)
+WrkngAPIED,(StatsWales Wales Only) Working-age people in employment deprivation (%)
+GpRcrddChC,(StatsWales Wales Only) GP-recorded chronic condition (rate per 100) (1)
+LmtngLngTI,(StatsWales Wales Only) Limiting long-term illness (rate per 100)
+PrematrDth,"(StatsWales Wales Only) Premature death (rate per 100,000)"
+GpRcrddMHC,(StatsWales Wales Only) GP-recorded mental health condition (rate per 100) (1)
+CncrIncdnc,"(StatsWales Wales Only) Cancer incidence (rate per 100,000)"
+LwBrthWght,(StatsWales Wales Only) Low birth weight (live single births less than 2.5kg) (%)
+FndtnPhAPS,(StatsWales Wales Only) Foundation Phase Average Point Score
+KyStg2AvPS,(StatsWales Wales Only) Key Stage 2 average point score
+KyStg4AvPS,(StatsWales Wales Only) Key Stage 4 average point score
+RptAbsntsm,(StatsWales Wales Only) Repeat Absenteeism (%)
+KyStg4LEHE,(StatsWales Wales Only) Key Stage 4 leavers entering Higher Education (%)
+AdA25_64NQ,(StatsWales Wales Only) Adults aged 25-64 with no qualifications (%)
+PrUOBA30MS,(StatsWales Wales Only) % Unavailability of broadband at 30Mb/s
+AvrgPbRTTAP,(StatsWales Wales Only) Average public return travel time to a pharmacy (minutes)
+AvrgPbRTTAFS,(StatsWales Wales Only) Average public return travel time to a food shop (minutes)
+AvrgPbRTTAGS,(StatsWales Wales Only) Average public return travel time to a GP surgery (minutes)
+AvrgPbRTTAPO,(StatsWales Wales Only) Average public return travel time to a post office (minutes)
+AvrgPbRTTAPS,(StatsWales Wales Only) Average public return travel time to a primary school (minutes)
+AvrgPbRTTAPL,(StatsWales Wales Only) Average public return travel time to a public library (minutes)
+AvrgPbRTTASF,(StatsWales Wales Only) Average public return travel time to a sports facility (minutes)
+AvrgPbRTTASS,(StatsWales Wales Only) Average public return travel time to a secondary school (minutes)
+AvrgPrRTTAP,(StatsWales Wales Only) Average private return travel time to a pharmacy (minutes)
+AvrgPrRTTAFS,(StatsWales Wales Only) Average private return travel time to a food shop (minutes)
+AvrgPrRTTAGS,(StatsWales Wales Only) Average private return travel time to a GP surgery (minutes)
+AvrgPrRTTAPO,(StatsWales Wales Only) Average private return travel time to a post office (minutes)
+AvrgPrvtRtrnTrvlTmAPrS,(StatsWales Wales Only) Average private return travel time to a primary school (minutes)
+AvrgPrRTTAPL,(StatsWales Wales Only) Average private return travel time to a public library (minutes)
+AvrgPrRTTASF,(StatsWales Wales Only) Average private return travel time to a sports facility (minutes)
+AvrgPrRTTASS,(StatsWales Wales Only) Average private return travel time to a secondary school (minutes)
+AvrgPrvtRtrnTrvlTmAPtS,(StatsWales Wales Only) Average private return travel time to a petrol station (minutes)
+PplInOvrcH,(StatsWales Wales Only) People in overcrowded households (%)
+LklhdOfPQH,(StatsWales Wales Only) Likelihood of poor quality housing (%)
+LklhdOHCSH,(StatsWales Wales Only) Likelihood of housing containing serious hazards (%)
+LklhdOHBID,(StatsWales Wales Only) Likelihood of housing being in disrepair (%)
+PplWACVFND,(StatsWales Wales Only) Population Weighted Average Concentration Value for Nitrogen Dioxide
+PWACVFP10Μ,(StatsWales Wales Only) Population Weighted Average Concentration Value for Particulates < 10 µm
+PWACVFP2_5,(StatsWales Wales Only) Population Weighted Average Concentration Value for Particulates < 2.5 µm
+HshldAROFS,(StatsWales Wales Only) Households at risk of flooding score
+PrxmtANGSS,(StatsWales Wales Only) Proximity to accessible natural green space score (% of households)
+AmbntGrnSS,(StatsWales Wales Only) Ambient Green Space Score
+PlcRcrddCD,(StatsWales Wales Only) Police recorded criminal damage (rate per 100)
+PlcRcrddVC,(StatsWales Wales Only) Police recorded violent crime (rate per 100)
+AntSclBhvr,(StatsWales Wales Only) Anti-Social Behaviour (rate per 100)
+PlcRcrddBr,(StatsWales Wales Only) Police recorded burglary (rate per 100)
+PlcRcrddTh,(StatsWales Wales Only) Police recorded theft (rate per 100)
+FirIncdncs,(StatsWales Wales Only) Fire incidences (rate per 100)
+WlshInOMDR,(StatsWales Wales Only) Welsh Index of Multiple Deprivation Rank
+WlshImdIDR,(StatsWales Wales Only) Welsh IMD Income Domain Rank (Reverse Scored - Higher Rank = More Deprived)
+WlshImdEmDR,(StatsWales Wales Only) Welsh IMD Employment Domain Rank (Reverse Scored - Higher Rank = More Deprived)
+WlshImdHDR,(StatsWales Wales Only) Welsh IMD Health Domain Rank (Reverse Scored - Higher Rank = More Deprived)
+WlshImdEdDR,(StatsWales Wales Only) Welsh IMD Education Domain Rank (Reverse Scored - Higher Rank = More Deprived)
+WlshImdASD,(StatsWales Wales Only) Welsh IMD Access to Services Domain (Reverse Scored - Higher Rank = More Deprived)
+WlshImdCSD,(StatsWales Wales Only) Welsh IMD Community Safety Domain (Reverse Scored - Higher Rank = More Deprived)
+WlshImdPED,(StatsWales Wales Only) Welsh IMD Physical Environment Domain (Reverse Scored - Higher Rank = More Deprived)
+WlshImdHsD,(StatsWales Wales Only) Welsh IMD Housing Domain (Reverse Scored - Higher Rank = More Deprived)
+CnSpkRdAWW,"(StatsWales Wales Only) Can speak, read and write Welsh"
+CnSpARBCWW,(StatsWales Wales Only) Can speak and read but cannot write Welsh
+CnSpBCROWW,(StatsWales Wales Only) Can speak but cannot read or write Welsh
+CnUndrsSWO,(StatsWales Wales Only) Can understand spoken Welsh only
+NWlshLnggS,(StatsWales Wales Only) No Welsh language skills
+NI_ETHWHPC,(Northern Ireland Census 2011) Ethnic Group White Percent (%)
+NI_ETHCHPC,(Northern Ireland Census 2011) Ethnic Group Chinese Percent (%)
+NI_ETHITPC,(Northern Ireland Census 2011) Ethnic Group Irish Traveller Percent (%)
+NI_ETHINDPC,(Northern Ireland Census 2011) Ethnic Group Indian Percent (%)
+NI_ETHPAKPC,(Northern Ireland Census 2011) Ethnic Group Pakistani Percent (%)
+NI_ETHBANPC,(Northern Ireland Census 2011) Ethnic Group Bangladeshi Percent (%)
+NI_ETHOTHASPC,(Northern Ireland Census 2011) Ethnic Group Other Asian Percent (%)
+NI_ETHBLCPC,(Northern Ireland Census 2011) Ethnic Group Black Caribbean Percent (%)
+NI_ETHBLAPC,(Northern Ireland Census 2011) Ethnic Group Black African Percent (%)
+NI_ETHBLOTHPC,(Northern Ireland Census 2011) Ethnic Group Black Other Percent (%)
+NI_ETHMIXPC,(Northern Ireland Census 2011) Ethnic Group Mixed Percent (%)
+NI_ETHOTHPC,(Northern Ireland Census 2011) Ethnic Group Other Percent (%)
+NI_NIBRITPC,(Northern Ireland Census 2011) National Identity British Percent (%)
+NI_NIIRISHPC,(Northern Ireland Census 2011) National Identity Irish Percent (%)
+NI_NINORIRIPC,(Northern Ireland Census 2011) National Identity Northern Irish Percent (%)
+NI_NIENGPC,(Northern Ireland Census 2011) National Identity English Percent (%)
+NI_NISCOTPC,(Northern Ireland Census 2011) National Identity Scottish Percent (%)
+NI_NIWELPC,(Northern Ireland Census 2011) National Identity Welsh Percent (%)
+NI_NIOTHPC,(Northern Ireland Census 2011) National Identity Other Percent (%)
+NI_RELCATHPC,(Northern Ireland Census 2011) Religion or Religion Brought Up In Catholic Percent (%)
+NI_RELPROT,(Northern Ireland Census 2011) Religion or Religion Brought Up In Protestant & Other Christian Percent (%)
+NI_RELOTH,(Northern Ireland Census 2011) Religion or Religion Brought Up In Other Religions Percent (%)
+NI_RELNONE,(Northern Ireland Census 2011) Religion or Religion Brought Up In None Percent (%)
+NI_MDM_RANK,(Northern Ireland IMD 2017) Multiple Deprivation Measure where 1 is most deprived
+NI_INCOME_PERC,(Northern Ireland IMD 2017) Proportion of the population living in households whose equivalised income is below 60 per cent of the NI median
+NI_INCOME_CHILD_PERC,(Northern Ireland IMD 2017) Proportion of the population aged 15 and under living in households whose equivalised income is below 60 per cent of the NI median
+NI_INCOME_65_PERC,(Northern Ireland IMD 2017) Proportion of the population aged 65 and over living in households whose equivalised income is below 60 per cent of the NI median
+NI_EMPL_PERC,(Northern Ireland IMD 2017) Proportion of the working age population who are employment deprived
+NI_LBW_PERC,(Northern Ireland IMD 2017) Proportion of Singleton Births with Low Birth Weight
+NI_PR_SEN_PERC,(Northern Ireland IMD 2017) Proportion of pupils attending Special Schools or attending primary school with Special Education Needs Stages 3 to 5
+NI_PR_ABS_PERC,(Northern Ireland IMD 2017) Absenteeism at Primary Schools of possible attendance
+NI_PP_GCSE_PERC,(Northern Ireland IMD 2017) Proportion of school leavers not achieving five or more GCSEs at A star to C and equivalent incl. English and maths
+NI_PP_NEETS_PERC,(Northern Ireland IMD 2017) Proportion of those leaving school aged 16 17 and 18 not entering Education Employment or Training
+NI_PP_HE_PERC,(Northern Ireland IMD 2017) Proportion of 18-21 year olds who have not enrolled in Higher Education Courses at Higher or Further Education establishments
+NI_PP_SEN_PERC,(Northern Ireland IMD 2017) Proportion of pupils attending Special Schools or who are attending post-primary schools with Special Education Needs Stages 3 to 5
+NI_BROADBAND_SPEED,(Northern Ireland IMD 2017) Proportion of properties with broadband speed below 10Mb per second
+NI_UNFIT_PERC,(Northern Ireland IMD 2017) Proportion of domestic dwellings that are unfit
+NI_DISREPAIR_PERC,(Northern Ireland IMD 2017) Proportion of domestic dwellings in a state of disrepair
+NI_ENERGY_PERC,(Northern Ireland IMD 2017) Proportion of domestic dwellings without 1 modern boiler or 2 loft insulation and double glazing
+NI_OVERCROWD_PERC,(Northern Ireland IMD 2017) Rate of Household overcrowding
+NI_ADAPT_PERC,(Northern Ireland IMD 2017) Proportion of population with disability without adaptations to dwelling
+NI_LAPS_PERC,(Northern Ireland IMD 2017) Proportion of domestic dwellings with Local Area Problem Scores
+NI_FLOOD_RISK_PERC,(Northern Ireland IMD 2017) Proportion of properties in flood risk area
+NI_VIOLENT_RATE,(Northern Ireland IMD 2017) Rate of Violence including sexual offences robbery and public order per 1000 population
+NI_BURGLARY_RATE,(Northern Ireland IMD 2017) Rate of Burglary per 1000 population
+NI_THEFT_RATE,(Northern Ireland IMD 2017) Rate of Theft per 1000 population
+NI_VEH_CRIME_RATE,(Northern Ireland IMD 2017) Rate of Vehicle Crime per 1000 population
+NI_DRIM_DAM_RATE,(Northern Ireland IMD 2017) Rate of Criminal Damage and Arson per 1000 population
+NI_DELIB_FIRE_RATE,(Northern Ireland IMD 2017) Rate of Deliberate Primary and Secondary Fires per 1000 population
+NI_ASB_RATE,(Northern Ireland IMD 2017) Rate of Anti-Social Behaviour Incidents per 1000 population

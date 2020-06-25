@@ -47,8 +47,8 @@ Sys.setenv('MAPBOX_TOKEN' = mapbox_access_token)
 
 
 # Load Pre-prepared data -------------------------------------------------------
-lsoa_data_spatial <- read_rds("data/mog_datav2.Rds")
-labels_lsoa_data <- read_csv("data/lsoa_dataset_labelsv2.csv")
+lsoa_data_spatial <- read_rds("data/mog_datav3.Rds")
+labels_lsoa_data <- read_csv("data/lsoa_dataset_labelsv3.csv")
 
 # Tidy labels
 labels_lsoa_data <- labels_lsoa_data %>% mutate(

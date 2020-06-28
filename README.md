@@ -5,7 +5,10 @@ It is intended to be used by educators for students to learn how to interact wit
 
 A live version can be loaded through shinyapps.io here: [https://webb.shinyapps.io/MOG_education/](https://webb.shinyapps.io/MOG_education/)
 
-You need a user token for the Mapbox API to run the app.
+## Setup
+
+* You need a user token for the Mapbox API to run the app.
+* If downloading verion 4 (Scotland) or above, you also need to unzip the data files in your local repository (raw data files are larger than 100mb)
 
 ![](mog_app_screen1.png)
 ![](mog_app_screen2.png)

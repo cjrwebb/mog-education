@@ -4,3 +4,6 @@
 .Ruserdata
 mapbox_token.txt
 /ni_data
+/scot_data
+data/mog_datav4.csv
+data/mog_datav4.Rds

@@ -2,11 +2,11 @@
 
 
 <h1>
-Welcome to <strong>MOG</strong> (alpha), the Mapping Overlaps Gadget for local authorities in England and Wales, and Health and Social Care Trusts in Northern Ireland.
+Welcome to <strong>MOG</strong>, the Mapping Overlaps Gadget for Local Authorities in England and Wales, and Health and Social Care Trusts in Northern Ireland, and Health and Social Care Boards in Scotland.
 </h1>
 <p><br></p>
-<p><strong>MOG</strong> is a Shiny app for visualising neighbourhood level data in England and some of Wales by Local Authority. It combines a collection of open data from the Office of National Statistics (ONS), the Consumer Data Research Centre (CDRC), the Department for Communities and Local Government (DCLG), and the Department for Transport (DfT), StatsWales, and NISRA (Northern Ireland).</p>
-<p>All data is at the <a href="https://www.ons.gov.uk/methodology/geography/ukgeographies/censusgeography" target="_blank">Lower Super Output Area</a> level (or equivalent in NI or Wales). There are 104 variables for England, 82 variables for Wales, and 45 shared variables between England and Wales. There are 50 variables for Northern Ireland. At the moment, the data included comes from the following government open data sources:</p>
+<p><strong>MOG</strong> is a Shiny app for visualising neighbourhood (LSOA) level data in England and Wales by Local Authority. You can also visualise SOA level data for Northern Ireland by Health and Social Care Trust, and Data Zone level data in Scotland by Health and Social Care Board It combines a collection of open data from the Office of National Statistics (ONS), the Consumer Data Research Centre (CDRC), the Department for Communities and Local Government (DCLG), and the Department for Transport (DfT), StatsWales, NISRA (Northern Ireland), and Statistics.Gov.Scot and National Records of Scotland (Scotland).</p>
+<p>All data is at the <a href="https://www.ons.gov.uk/methodology/geography/ukgeographies/censusgeography" target="_blank">Lower Super Output Area</a> level (or equivalent in NI or Scotland). There are 104 variables for England, 82 variables for Wales, and 45 shared variables between England and Wales. There are 50 variables for Northern Ireland and 49 for Scotland, a full list of which can be found below. At the moment, the data included comes from the following government open data sources:</p>
 <ul>
 <li>Data from the Indices of Multiple Deprivation 2019</li>
 <li>Data from the 2011 Census relating to Ethnicity</li>
@@ -17,6 +17,8 @@ Welcome to <strong>MOG</strong> (alpha), the Mapping Overlaps Gadget for local a
 <li>StatsWales</li>
 <li>Northern Ireland Statistics and Research Agency</li>
 <li>Northern Ireland Indices of Multiple Deprivation 2017</li>
+<li>Scottish Indices of Multiple Deprivation &amp; Indicators 2020</li>
+<li>Scottish Census Data (2011)</li>
 </ul>
 <p>The <strong>MOG</strong> contains two features:</p>
 <ul>
@@ -27,7 +29,8 @@ Welcome to <strong>MOG</strong> (alpha), the Mapping Overlaps Gadget for local a
 <p>The <strong>MOG</strong> also allows you to create simple bivariate, or overlap, maps. These types of maps combine values of two different variables to assess their relationship by mixing their colour palette. The idea and templates for some of the code came from <a href="https://timogrossenbacher.ch/2019/04/bivariate-maps-with-ggplot2-and-sf/" target="_blank">this blog post</a> by Timo Grossenbacher, who created a far more beautiful static bivariate map.</p>
 <p>The <strong>MOG</strong> education version also allows for simple correlations, ANOVA tests, and linear models.</p>
 <p>I hope that people will find some interesting ways to use the <strong>MOG</strong>. I’ve written a blog post, <a href="http://calumwebb.uk/posts/mog-alpha-launch/" target="_blank">hosted here</a>, with an example of how the maps can be used for scoping out potential research projects or local policy initiatives.</p>
-<p>If you have any comments or suggestions you can find my contact details <a href="https://www.sheffield.ac.uk/socstudies/staff/staff-profiles/calum-webb" target="_blank">here</a>.</p>
+<p>The <strong>MOG</strong> was created with social workers and support workers in mind, as a way for people to explore the socioeconomic and structural pressures people they work with might experience. <a href="http://calumwebb.uk/datapowersocialwork.html">I developed a resources about why I think this is important that you can read by clicking here.</a></p>
+<p>If you have any comments or suggestions you can find my contact details <a href="https://www.sheffield.ac.uk/socstudies/staff/staff-profiles/calum-webb" target="_blank">here</a>. If you would like to add data, report issues, or modify the source code in any way, it is available <a href="https://github.com/cjrwebb/mog-education">on github</a>.</p>
 <p>Best wishes and thanks for trying out the <strong>MOG</strong>,</p>
 <p>Cal</p>
 <hr />
@@ -1777,6 +1780,398 @@ NI_ASB_RATE
 </td>
 <td style="text-align:left;">
 (Northern Ireland IMD 2017) Rate of Anti-Social Behaviour Incidents per 1000 population
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_WhiteTotal_CEN
+</td>
+<td style="text-align:left;">
+(Scottish Census 2011) White: Total (Household Reference Person Percent)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_WhiteScttsh_CEN
+</td>
+<td style="text-align:left;">
+(Scottish Census 2011) White: Scottish (Household Reference Person Percent)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_WhtOthrBrts_CEN
+</td>
+<td style="text-align:left;">
+(Scottish Census 2011) White: Other British (Household Reference Person Percent)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_WhiteIrish_CEN
+</td>
+<td style="text-align:left;">
+(Scottish Census 2011) White: Irish (Household Reference Person Percent)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_WhiteOther1_CEN
+</td>
+<td style="text-align:left;">
+(Scottish Census 2011) White: Other (Household Reference Person Percent)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_MxdOrMltpEG_CEN
+</td>
+<td style="text-align:left;">
+(Scottish Census 2011) Mixed or multiple ethnic groups (Household Reference Person Percent)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_AsnAsnScOAB_CEN
+</td>
+<td style="text-align:left;">
+(Scottish Census 2011) Asian Asian Scottish or Asian British (Household Reference Person Percent)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_African_CEN
+</td>
+<td style="text-align:left;">
+(Scottish Census 2011) African (Household Reference Person Percent)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_CrbbnOrBlck_CEN
+</td>
+<td style="text-align:left;">
+(Scottish Census 2011) Caribbean or Black (Household Reference Person Percent)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_OthrEthncGr_CEN
+</td>
+<td style="text-align:left;">
+(Scottish Census 2011) Other ethnic groups (Household Reference Person Percent)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_EmplymntRnk_SIMD
+</td>
+<td style="text-align:left;">
+(Scottish IMD 2020) Employment (Rank Lower = Least Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_HealthRank_SIMD
+</td>
+<td style="text-align:left;">
+(Scottish IMD 2020) Health (Rank Lower = Least Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_SimdRank_SIMD
+</td>
+<td style="text-align:left;">
+(Scottish IMD 2020) SIMD (Rank Lower = Least Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_AccssTSrvcR_SIMD
+</td>
+<td style="text-align:left;">
+(Scottish IMD 2020) Access To Services (Rank Lower = Least Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_IncomeRank_SIMD
+</td>
+<td style="text-align:left;">
+(Scottish IMD 2020) Income (Rank Lower = Least Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_HousingRank_SIMD
+</td>
+<td style="text-align:left;">
+(Scottish IMD 2020) Housing (Rank Lower = Least Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_CrimeRank_SIMD
+</td>
+<td style="text-align:left;">
+(Scottish IMD 2020) Crime (Rank Lower = Least Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_EdctnSklATR_SIMD
+</td>
+<td style="text-align:left;">
+(Scottish IMD 2020) Education Skills And Training (Rank Lower = Least Deprived)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_SSS2017_20C_CRI
+</td>
+<td style="text-align:left;">
+(Scottish IMD Crime Domain Data 2017/2018) SIMD crimes recorded (Count)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_SSS2014_20C_CRI
+</td>
+<td style="text-align:left;">
+(Scottish IMD Crime Domain Data 2014/2015) SIMD crimes recorded (Count)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_SS10_000P2017_CRI
+</td>
+<td style="text-align:left;">
+(Scottish IMD Crime Domain Data 2017/2018) SIMD crimes per 10,000 people (Ratio)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_SS10_000P2014_CRI
+</td>
+<td style="text-align:left;">
+(Scottish IMD Crime Domain Data 2014/2015) SIMD crimes per 10,000 people (Ratio)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_PostOffcByCr_ATS
+</td>
+<td style="text-align:left;">
+(Scottish IMD Access to Services 2018) Post Office by Car (Minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_PtrlSttnByCr_ATS
+</td>
+<td style="text-align:left;">
+(Scottish IMD Access to Services 2018) Petrol Station by Car (Minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_PstOffcByPbT_ATS
+</td>
+<td style="text-align:left;">
+(Scottish IMD Access to Services 2018) Post Office by Public Transport (Minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_RetlCntrByCr_ATS
+</td>
+<td style="text-align:left;">
+(Scottish IMD Access to Services 2018) Retail Centre by Car (Minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_GpByPblcTrns_ATS
+</td>
+<td style="text-align:left;">
+(Scottish IMD Access to Services 2018) GP by Public Transport (Minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_RtlCntrByPbT_ATS
+</td>
+<td style="text-align:left;">
+(Scottish IMD Access to Services 2018) Retail Centre by Public Transport (Minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_GpByCar_ATS
+</td>
+<td style="text-align:left;">
+(Scottish IMD Access to Services 2018) GP by Car (Minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_ScndrySchlBC_ATS
+</td>
+<td style="text-align:left;">
+(Scottish IMD Access to Services 2018) Secondary School by Car (Minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_PrmrySchlByC_ATS
+</td>
+<td style="text-align:left;">
+(Scottish IMD Access to Services 2018) Primary School by Car (Minutes)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_SctS16_19NE_EDU
+</td>
+<td style="text-align:left;">
+(Scottish Education Indicators 2015/16-2016/17) People aged 16-19 not participating in education, employment or training (Percent Of People)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_SctS17_21YE_EDU
+</td>
+<td style="text-align:left;">
+(Scottish Education Indicators 2015/16-2016/17) People aged 17-21 year entering in to full time higher education (Percent Of People)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_ScotSaEdu_EDU
+</td>
+<td style="text-align:left;">
+(Scottish Education Indicators 2015/16-2016/17) Attainment of school leavers (Average Highest Qualification Score)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_SS100S2015H_HEL
+</td>
+<td style="text-align:left;">
+(Scottish Health Indicators 2015) Comparative illness factor (Comparative Illness Factor (Age-Sex standardised, 100 = Scotland average for a population with the same age and sex profile))
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_SS100S2017H_HEL
+</td>
+<td style="text-align:left;">
+(Scottish Health Indicators 2017) Comparative illness factor (Comparative Illness Factor (Age-Sex standardised, 100 = Scotland average for a population with the same age and sex profile))
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_ScotSpHel_HEL
+</td>
+<td style="text-align:left;">
+(Scottish Health Indicators 2017/2018) Population prescribed drugs for anxiety, depression or psychosis (Percent Of People)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_ScotSl2Hel_HEL
+</td>
+<td style="text-align:left;">
+(Scottish Health Indicators 2014/15-2017/18) Live singleton births of low birth weight (Percent Of Births)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_ScotShHel_HEL
+</td>
+<td style="text-align:left;">
+(Scottish Health Indicators 2014/15-2017/18) Hospital stays related to drug misuse (Hospital stays (Age-Sex standardised, 100 = Scotland average for a population with the same age and sex profile))
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_ScotShHel_2_HEL
+</td>
+<td style="text-align:left;">
+(Scottish Health Indicators 2014/15-2017/18) Hospital stays related to alcohol misuse (Hospital stays (Age-Sex standardised, 100 = Scotland average for a population with the same age and sex profile))
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_ScotSe10Hel_HEL
+</td>
+<td style="text-align:left;">
+(Scottish Health Indicators 2014/15-2017/18) Emergency stays in hospital (Hospital stays (Age-Sex standardised, 100 = Scotland average for a population with the same age and sex profile))
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_EmplymntDpC_EMP
+</td>
+<td style="text-align:left;">
+(Scottish Employment 2017) Employment Deprived (Count)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_EmplymntDpR_EMP
+</td>
+<td style="text-align:left;">
+(Scottish Employment 2017) Employment Deprived (Ratio)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_PrcnOPWATSB_BB
+</td>
+<td style="text-align:left;">
+(Scottish IMD Broadband Access Indicator 2019) Percent of premises without access to superfast broadband
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_PplInHsTAOC_HOU
+</td>
+<td style="text-align:left;">
+(Scottish IMD Housing Indicators 2011) People in households that are overcrowded (Count)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_PplInHsWCHC_HOU
+</td>
+<td style="text-align:left;">
+(Scottish IMD Housing Indicators 2011) People in households without central heating (Count)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_PplInHsTAOP_HOU
+</td>
+<td style="text-align:left;">
+(Scottish IMD Housing Indicators 2011) People in households that are overcrowded (Percent)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_PplInHsWCHP_HOU
+</td>
+<td style="text-align:left;">
+(Scottish IMD Housing Indicators 2011) People in households without central heating (Percent)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SCOT_SchlAttnRAP_SCH
+</td>
+<td style="text-align:left;">
+(Scottish School Attendance 2016/2017) School attendance rate, All (Percentage)
 </td>
 </tr>
 </tbody>

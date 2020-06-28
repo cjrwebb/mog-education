@@ -10,19 +10,19 @@ library("tidyverse")
 library("htmlTable")
 library("kableExtra")
 
-variable_list <- read_csv("data/lsoa_dataset_labelsv3.csv")
-# 214 variables as of NI update
+variable_list <- read_csv("data/lsoa_dataset_labelsv4.csv")
+# 265 variables as of Scottish update
 
 ```
 
 
-<h1>Welcome to __MOG__ (alpha), the Mapping Overlaps Gadget for local authorities in England and Wales, and Health and Social Care Trusts in Northern Ireland.</h1>
+<h1>Welcome to __MOG__, the Mapping Overlaps Gadget for Local Authorities in England and Wales, and Health and Social Care Trusts in Northern Ireland, and Health and Social Care Boards in Scotland.</h1>
 
 <br>
 
-__MOG__ is a Shiny app for visualising neighbourhood level data in England and some of Wales by Local Authority. It combines a collection of open data from the Office of National Statistics (ONS), the Consumer Data Research Centre (CDRC), the Department for Communities and Local Government (DCLG), and the Department for Transport (DfT), StatsWales, and NISRA (Northern Ireland).
+__MOG__ is a Shiny app for visualising neighbourhood (LSOA) level data in England and Wales by Local Authority. You can also visualise SOA level data for Northern Ireland by Health and Social Care Trust, and Data Zone level data in Scotland by Health and Social Care Board It combines a collection of open data from the Office of National Statistics (ONS), the Consumer Data Research Centre (CDRC), the Department for Communities and Local Government (DCLG), and the Department for Transport (DfT), StatsWales, NISRA (Northern Ireland), and Statistics.Gov.Scot and National Records of Scotland (Scotland).
 
-All data is at the [Lower Super Output Area](https://www.ons.gov.uk/methodology/geography/ukgeographies/censusgeography){target="_blank"} level (or equivalent in NI or Wales). There are 104 variables for England, 82 variables for Wales, and 45 shared variables between England and Wales. There are 50 variables for Northern Ireland. At the moment, the data included comes from the following government open data sources:
+All data is at the [Lower Super Output Area](https://www.ons.gov.uk/methodology/geography/ukgeographies/censusgeography){target="_blank"} level (or equivalent in NI or Scotland). There are 104 variables for England, 82 variables for Wales, and 45 shared variables between England and Wales. There are 50 variables for Northern Ireland and 49 for Scotland, a full list of which can be found below. At the moment, the data included comes from the following government open data sources:
 
 * Data from the Indices of Multiple Deprivation 2019
 * Data from the 2011 Census relating to Ethnicity
@@ -33,6 +33,8 @@ All data is at the [Lower Super Output Area](https://www.ons.gov.uk/methodology/
 * StatsWales
 * Northern Ireland Statistics and Research Agency
 * Northern Ireland Indices of Multiple Deprivation 2017
+* Scottish Indices of Multiple Deprivation & Indicators 2020
+* Scottish Census Data (2011)
 
 The __MOG__ contains two features:
 
@@ -47,7 +49,9 @@ The __MOG__ education version also allows for simple correlations, ANOVA tests, 
 
 I hope that people will find some interesting ways to use the __MOG__. I've written a blog post, [hosted here](http://calumwebb.uk/posts/mog-alpha-launch/){target="_blank"}, with an example of how the maps can be used for scoping out potential research projects or local policy initiatives. 
 
-If you have any comments or suggestions you can find my contact details [here](https://www.sheffield.ac.uk/socstudies/staff/staff-profiles/calum-webb){target="_blank"}.
+The __MOG__ was created with social workers and support workers in mind, as a way for people to explore the socioeconomic and structural pressures people they work with might experience. [I developed a resources about why I think this is important that you can read by clicking here.](http://calumwebb.uk/datapowersocialwork.html)
+
+If you have any comments or suggestions you can find my contact details [here](https://www.sheffield.ac.uk/socstudies/staff/staff-profiles/calum-webb){target="_blank"}. If you would like to add data, report issues, or modify the source code in any way, it is available [on github](https://github.com/cjrwebb/mog-education).
 
 Best wishes and thanks for trying out the __MOG__,
 
